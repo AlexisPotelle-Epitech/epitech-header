@@ -1,6 +1,6 @@
 nnoremap <F10> :call HeaderF10()<cr>
 
-let s:Epitech       = "EPITECH PROJET, "
+let s:Epitech       = "EPITECH PROJECT, "
 let s:Descrip       = "File Description:"
 
 function s:GetComStr()
@@ -9,7 +9,7 @@ function s:GetComStr()
         let s:cs = "/\*"
         let s:cc = "\*\* "
         let s:ce = "\*/"
-    elseif &ft == "make" || &ft == "text" || &ft == "vim"
+    elseif &ft == "make" || &ft == "text"
         let s:cs = "##"
         let s:cc = "## "
         let s:cs = "##"
