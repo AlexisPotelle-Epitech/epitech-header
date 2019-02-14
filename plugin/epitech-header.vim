@@ -43,7 +43,7 @@ endfunction
 function HeaderF10()
   if s:GetComStr()
     if getline(1) == s:cs && getline(6) == s:ce
-      execute "normal! gg9dd"
+      execute "normal! gg6dd"
     endif
     call HeaderCreate(0)
   endif
