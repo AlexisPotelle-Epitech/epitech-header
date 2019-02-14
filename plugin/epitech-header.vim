@@ -30,8 +30,8 @@ if s:GetComStr()
       \ s:cc . s:Descrip . "\n".
       \ s:cc . expand("%:t") . "\n".
       \ s:ce
-    if getline(10) !~ '^\s*$' "pb avec le shebang
-      execute "normal! 10"
+    if getline(7) !~ '^\s*$' "pb avec le shebang
+      execute "normal! 7"
       execute "normal! o"
     endif
     setl fo+=o fo+=r fo+=a fo+=c
