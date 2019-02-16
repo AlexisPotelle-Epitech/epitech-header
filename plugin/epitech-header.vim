@@ -1,3 +1,18 @@
+"<========================================>
+"<           AUTO-CLOSE { ( [ ' "         >
+"<========================================>
+
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap { {<cr>}<esc>O
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+inoremap ` ``<LEFT>
+
+"<========================================>
+"<            EPITECH HEADER              >
+"<========================================>
+
 nnoremap <F10> :call HeaderF10()<cr>
 autocmd FileType c set colorcolumn=80 " Affiche colonnes limites 80 caractere
 
