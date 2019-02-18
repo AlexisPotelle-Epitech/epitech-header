@@ -25,7 +25,7 @@ function s:GetComStr()
         let s:cs = "/\*"
         let s:cc = "\*\* "
         let s:ce = "\*/"
-   elseif expand("%:e") == "py" || &ft == "text"
+  elseif &ft == "make" || &ft == "text"
         let s:cs = "##"
         let s:cc = "## "
         let s:cs = "##"
