@@ -215,6 +215,7 @@ augroup END
 "<           AUTO-CLOSE { ( [ ' "         >
 "<========================================>
 
+set showmatch           " Mettre en évidence les parenthèses qui correspondent
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap { {<cr>}<esc>O
@@ -226,6 +227,7 @@ inoremap ` ``<LEFT>
 "<            EPITECH HEADER              >
 "<========================================>
 
+set cursorline          " Souligne la ligne courrante
 nnoremap <F10> :call HeaderF10()<cr>
 autocmd FileType c set colorcolumn=80 " Affiche colonnes limites 80 caractere
 
@@ -250,9 +252,6 @@ function s:GetComStr()
         let s:cs = "#!/bin/bash\n##"
         let s:cc = "## "
         let s:ce = "##"
-
-
-
     else
         let hascom = 0
     endif
