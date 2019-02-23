@@ -246,6 +246,12 @@ function s:GetComStr()
         let s:cs = "#!/usr/bin/python3\n##"
         let s:cc = "## "
         let s:ce = "##"
+    elseif &ft == "sh"
+        let s:cs = "#!/bin/bash\n##"
+        let s:cc = "## "
+        let s:ce = "##"
+
+
 
     else
         let hascom = 0
