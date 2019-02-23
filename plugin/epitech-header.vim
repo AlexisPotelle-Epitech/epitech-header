@@ -102,37 +102,6 @@ endif
 
 
 " -------------------------------------------------------------
-" Options
-" -------------------------------------------------------------
-
-if !exists("g:togglecursor_default")
-    let g:togglecursor_default = 'blinking_block'
-endif
-
-if !exists("g:togglecursor_insert")
-    let g:togglecursor_insert = 'blinking_line'
-    if $XTERM_VERSION != "" && s:GetXtermVersion($XTERM_VERSION) < 282
-        let g:togglecursor_insert = 'blinking_underline'
-    endif
-endif
-
-if !exists("g:togglecursor_replace")
-    let g:togglecursor_replace = 'blinking_underline'
-endif
-
-if !exists("g:togglecursor_leave")
-    if str2nr($VTE_VERSION) >= 3900
-        let g:togglecursor_leave = 'blinking_block'
-    else
-        let g:togglecursor_leave = 'block'
-    endif
-endif
-
-if !exists("g:togglecursor_disable_tmux")
-    let g:togglecursor_disable_tmux = 0
-endif
-
-" -------------------------------------------------------------
 " Functions
 " -------------------------------------------------------------
 
@@ -241,7 +210,7 @@ function s:GetComStr()
   elseif &ft == "make" || &ft == "text"
         let s:cs = "##"
         let s:cc = "## "
-        let s:cs = "##"
+        let s:ce = "##"
     else
         let hascom = 0
     endif
