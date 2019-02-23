@@ -100,6 +100,7 @@ if s:supported_terminal == ''
     finish
 endif
 
+"
 
 " -------------------------------------------------------------
 " Functions
