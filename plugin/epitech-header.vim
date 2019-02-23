@@ -243,7 +243,7 @@ function s:GetComStr()
         let s:cc = "## "
         let s:ce = "##"
     elseif &ft == "python"
-        let s:cs = "#!/usr/bin/python3\n\n##"
+        let s:cs = "#!/usr/bin/python3\n##"
         let s:cc = "## "
         let s:ce = "##"
 
