@@ -238,10 +238,15 @@ function s:GetComStr()
         let s:cs = "/\*"
         let s:cc = "\*\* "
         let s:ce = "\*/"
-  elseif &ft == "make" || &ft == "text"
+    elseif &ft == "make" || &ft == "text"
         let s:cs = "##"
         let s:cc = "## "
         let s:ce = "##"
+    elseif &ft == "python"
+        let s:cs = "#!/usr/bin/python3\n\n##"
+        let s:cc = "## "
+        let s:ce = "##"
+
     else
         let hascom = 0
     endif
@@ -271,7 +276,7 @@ endfunction
 
 function HeaderF10()
   if s:GetComStr()
-    if getline(1) == s:cs && getline(6) == s:ce
+    if getline(1) == s:cs && getline(6) == s:ce || getline(1) == s:cs && getline(8) == s:ce
       execute "normal! gg6dd"
     endif
     call HeaderCreate(0)
