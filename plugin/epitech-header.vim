@@ -240,7 +240,7 @@ function s:GetComStr()
         let s:cs = "/\*"
         let s:cc = "\*\* "
         let s:ce = "\*/"
-    elseif &ft == "make" || &ft == "text"
+    elseif &ft == "make" || &ft == "text" || &ft == "asm"
         let s:cs = "##"
         let s:cc = "## "
         let s:ce = "##"
