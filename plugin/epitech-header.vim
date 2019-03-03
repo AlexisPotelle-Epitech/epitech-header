@@ -281,9 +281,7 @@ endfunction
 
 function HeaderF10()
   if s:GetComStr()
-    if getline(1) == '^\s*$' && getline(7) == s:ce
-      execute "normal! gg7dd"
-    elseif getline(1) == s:cs && getline(6) == s:ce
+    if getline(1) == s:cs && getline(6) == s:ce
       execute "normal! gg6dd"
     endif
     call HeaderCreate(0)
