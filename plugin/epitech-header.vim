@@ -236,7 +236,7 @@ let s:Descrip       = "File Description:"
 
 function s:GetComStr()
     let hascom = 1
-    if &ft == "c"  || &ft == "css" || &ft == "cpp"
+    if &ft == "c"  || &ft == "css" || &ft == "cpp" || &ft == "java" || &ft == "cs"
         let s:cs = "/\*"
         let s:cc = "\*\* "
         let s:ce = "\*/"
@@ -248,10 +248,27 @@ function s:GetComStr()
         let s:cs = "#!/usr/bin/python3\n##"
         let s:cc = "## "
         let s:ce = "##"
+    elseif &ft == "perl"
+        let s:cs = "#!/usr/bin/perl\n##"
+        let s:cc = "## "
+        let s:ce = "##"
+    elseif &ft == "ruby"
+        let s:cs = "#!/usr/bin/ruby\n##"
+        let s:cc = "## "
+        let s:ce = "##"
     elseif &ft == "sh"
         let s:cs = "#!/bin/bash\n##"
         let s:cc = "## "
         let s:ce = "##"
+    elseif &ft == "haskell"
+        let s:cs = "--"
+        let s:cc = "-- "
+        let s:ce = "--"
+    elseif &ft == "go"
+        let s:cs = "//"
+        let s:cc = "// "
+        let s:ce = "//"
+
     else
         let hascom = 0
     endif
