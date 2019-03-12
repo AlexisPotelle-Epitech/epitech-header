@@ -293,7 +293,7 @@ if s:GetComStr()
     setl fo+=o fo+=r fo+=a fo+=c
     setl autoindent smartindent cindent
     execute "normal! 2"
-    execute "normal! ,+4 s/^ *//g"
+    execute ",+4 s/^ *//g"
     execute "normal! G"
 endif
 endfunction
