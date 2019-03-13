@@ -228,6 +228,7 @@ inoremap ` ``<LEFT>
 "<========================================>
 
 set cursorline          " Souligne la ligne courrante
+let s:touch_Header=<F10>
 nnoremap <F10> :call HeaderF10()<cr>
 autocmd FileType c set colorcolumn=80 " Affiche colonnes limites 80 caractere
 
@@ -292,10 +293,25 @@ if s:GetComStr()
     endif
     setl fo+=o fo+=r fo+=a fo+=c
     setl autoindent smartindent cindent
-    execute "normal! 2"
-    ",+4 s/^ *//g
-    execute "normal! G"
+    if expand("%:e") == "h"
+      if a:new
+	    call s:ProtectHeaders()
+      endif
+    else
+      execute "normal! 2"
+      ",+4 s/^ *//g
+      execute "normal! G"
 endif
+endfunction
+
+function s:ProtectHeaders()
+  let filename = substitute(toupper(expand("%:t")), "\\.", "_", "g") . "_"
+    execute "normal! Go" .
+      \ '#ifndef '. filename . "\n".
+      \ '#  define ' . filename . "\n".
+      \ "\n\n\n".
+      \ '#endif /* !' . filename . ' */'
+  normal! kk
 endfunction
 
 function HeaderF10()
