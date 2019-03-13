@@ -301,6 +301,7 @@ if s:GetComStr()
       execute "normal! 2"
       ",+4 s/^ *//g
       execute "normal! G"
+    endif
 endif
 endfunction
 
