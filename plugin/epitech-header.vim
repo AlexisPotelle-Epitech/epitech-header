@@ -294,7 +294,7 @@ if s:GetComStr()
     setl autoindent smartindent cindent
     if expand("%:e") == "h"
       if a:new
-	    call s:ProtectHeaders()
+	    call ProtectHeaders()
       endif
     else
       execute "normal! 2"
@@ -304,14 +304,13 @@ if s:GetComStr()
 endif
 endfunction
 
-function s:ProtectHeaders()
+function ProtectHeaders()
   let filename = substitute(toupper(expand("%:t")), "\\.", "_", "g") . "_"
-    execute "normal! Go" .
+    execute "normal! G" .
       \ '#ifndef '. filename . "\n".
       \ '#  define ' . filename . "\n".
       \ "\n\n\n".
       \ '#endif /* !' . filename . ' */'
-  normal! kk
 endfunction
 
 function HeaderF10()
