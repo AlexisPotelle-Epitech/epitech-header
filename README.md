@@ -1,7 +1,7 @@
 # EPITECH HEADER
 
-<ol>
-    <li>item</li>
-    <li>item</li>
-    <li>item</li>
-</ol
+## Fonction
+
+* Header epitech
+* Curseuir style vscode
+* Auto close {} [] () '' ""
