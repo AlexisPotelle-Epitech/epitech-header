@@ -30,7 +30,7 @@ Pathogen
     git clone https://github.com/alexispotelle-epitech/epitech-header
 
 ## Utilisation
-Commade Header : `:Header` ou touche `F10` 
+Commade Header : `:Header` ou touche `F10`  
 Les autre fonctionnaliter sont activer en permanance
 
 ## Config
