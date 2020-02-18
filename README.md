@@ -17,7 +17,7 @@ Les autre Fonctionnaliter dispo tous le temps
 * Norme C (Partiellement)
 * Curseuir style vscode
 * Auto close {} [] () '' ""
-***
+
 ## Installation
 
 Vundle
@@ -28,7 +28,7 @@ Pathogen
 
     cd ~/.vim/bundle
     git clone https://github.com/alexispotelle-epitech/epitech-header
-***
+
 ## Utilisation
 Commade Header : `:Header` ou touche `F10`
 Les autre fonctionnaliter sont activer en permanance
