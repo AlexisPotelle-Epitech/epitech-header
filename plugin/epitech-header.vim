@@ -307,4 +307,5 @@ function HeaderF10()
     call HeaderCreate(0)
   endif
 endfunction
+command! Header call HeaderF10()
 
