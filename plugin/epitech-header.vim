@@ -228,7 +228,6 @@ inoremap ` ``<LEFT>
 "<========================================>
 
 set cursorline          " Souligne la ligne courrante
-let g:putHeader     = <F10>
 nnoremap <F10> :call HeaderF10()<cr>
 autocmd FileType c set colorcolumn=80 " Affiche colonnes limites 80 caractere
 
