@@ -34,7 +34,7 @@ Commade Header : `:Header` ou touche `F10`
 Les autre fonctionnaliter sont activer en permanance
 
 ## Config
-Modifier touch Header : `nmap "touche" :Header`
+Modifier touch Header : `nmap "touche" :Header`  
 Les autre fonctionnaliter sont activer en permanance et non configurable pour le moment
 
     
