@@ -275,7 +275,7 @@ function s:GetComStr()
     return hascom
 endfunction
 
-function HeaderCreate(new)
+function HeaderCreate()
 if s:GetComStr()
     setl fo-=o fo-=r fo-=a fo-=c
     setl noautoindent nosmartindent nocindent
@@ -305,7 +305,7 @@ function HeaderF10()
     elseif stridx(getline(3), "EPITECH PROJECT,")
         execute "normal! gg7dd"        
     endif
-    call HeaderCreate(0)
+    call HeaderCreate()
 
   endif
 endfunction
