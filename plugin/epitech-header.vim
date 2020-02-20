@@ -301,11 +301,13 @@ function HeaderF10()
   if s:GetComStr()
     if stridx(getline(2), "EPITECH PROJECT,")
 "    if getline(1) == s:cs && getline(6) == s:ce
-        execute "normal! gg6dd"
+        return
     elseif stridx(getline(3), "EPITECH PROJECT,")
-        execute "normal! gg7dd"        
+        return
+    else
+        call HeaderCreate()       
     endif
-    call HeaderCreate()
+    "call HeaderCreate()
 
   endif
 endfunction
