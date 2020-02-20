@@ -292,7 +292,7 @@ if s:GetComStr()
 
       "execute "normal! 2"
       ",+4 s/^ *//g
-      "execute "normal! G"
+      execute "normal! G"
 endif
 endfunction
 
@@ -301,13 +301,10 @@ function HeaderF10()
     if stridx(getline(2), "EPITECH PROJECT,")
 "    if getline(1) == s:cs && getline(6) == s:ce
         execute "normal! gg6dd"
-        call HeaderCreate(0)
     elseif stridx(getline(3), "EPITECH PROJECT,")
-        execute "normal! gg7dd"
-        call HeaderCreate(0)
-    else
-        call HeaderCreate(0)
+        execute "normal! gg7dd"        
     endif
+    call HeaderCreate(0)
 
   endif
 endfunction
