@@ -285,7 +285,8 @@ if s:GetComStr()
       \ s:cc . expand("%:p:h:t") . "\n".
       \ s:cc . s:Descrip . "\n".
       \ s:cc . expand("%:t") . "\n".
-      \ s:ce
+      \ s:ce .
+      \ ""
 
     setl fo+=o fo+=r fo+=a fo+=c
     setl autoindent smartindent cindent
