@@ -304,10 +304,14 @@ function HeaderF10()
     if stridx(getline(2), "EPITECH PROJECT,")
 "    if getline(1) == s:cs && getline(6) == s:ce
         execute "normal! gg6dd"
+        call HeaderCreate(0)
     elseif stridx(getline(3), "EPITECH PROJECT,")
         execute "normal! gg7dd"
+        call HeaderCreate(0)
+    else
+        call HeaderCreate(0)
     endif
-    call HeaderCreate(0)
+
   endif
 endfunction
 command! Header call HeaderF10()
