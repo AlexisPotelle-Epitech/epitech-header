@@ -303,11 +303,9 @@ function HeaderF10()
 "    if getline(1) == s:cs && getline(6) == s:ce
         return
     elseif stridx(getline(3), "EPITECH PROJECT,")
-        return
-    else
-        call HeaderCreate()       
+        return     
     endif
-    "call HeaderCreate()
+    call HeaderCreate()
 
   endif
 endfunction
